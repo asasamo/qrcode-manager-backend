@@ -1,0 +1,5 @@
+{
+    "MongoDB": "mongodb://%%user%%:%%pass%%@%%addr%%:%%port%%/%%db%%?authSource=admin",
+    "PORT": 8080,
+    "slugLength": 6
+}
