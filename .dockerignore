@@ -1,0 +1,4 @@
+node_modules
+deployDocker.sh
+.env
+.git
