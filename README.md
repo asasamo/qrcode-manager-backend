@@ -1,0 +1,1 @@
+# qrcode-manager-backend
