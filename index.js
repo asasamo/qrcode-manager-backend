@@ -34,17 +34,19 @@ const app = express()
 
 // Routes
 var manageSlug = require('./routes/manage')
-var root = require('./routes/root')
+var serverConfig = require('./routes/serverConfig')
 var slug = require('./routes/slug')
+var list = require('./routes/list')
 
 // Middlewares
 var checkToken = require('./middlewares/checkToken')
 
 app.use(bodyParser.json())
 
-app.use('/info', checkToken, root)
+app.use('/config', checkToken, serverConfig)
 app.use('/to', slug)
 app.use('/manage', checkToken, manageSlug)
+app.use('/list', checkToken, list)
 
 app.listen(config.PORT)
 log.debug(`Server running on port ${config.PORT}!`)
